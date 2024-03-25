@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>소개 - Park's Emotion</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+    .bg-image {
+        background-image: url('AI_half_trans.png');
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+    .content {
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+        background: transparent;
+    }
+    .header, .footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #343a40;
+        color: white;
+    }
+    .nav {
+        overflow: hidden;
+        background-color: #007bff;
+        padding: 0 20px;
+    }
+    .nav a {
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        transition: background-color 0.3s;
+    }
+    .nav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+    .nav a.right {
+        float: right;
+    }
+    .introduction-section {
+        max-width: 800px;
+        margin: 40px auto;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .introduction-section h2 {
+        margin-top: 0;
+    }
+    .introduction-section p {
+        line-height: 1.6;
+    }
+    .footer a {
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+    }
+    .footer a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+
+<div class="bg-image"></div>
+
+<div class="header">
+  <h1>Park's Emotion LAB</h1>
+</div>
+
+<div class="nav">
+  <a href="index.html"><i class="fas fa-home"></i> Home</a>
+  <a href="Introduc.html" class="active"><i class="fas fa-users"></i> Introduce</a>
+  <a href="Fashion.html"><i class="fas fa-tshirt"></i> Fashion</a>
+  <a href="Emotion.html"><i class="fas fa-smile"></i> Emotion</a>
+  <a href="Regist.html" class="right"><i class="fas fa-user-plus"></i> Regist</a>
+  <a href="Login.html" class="right"><i class="fas fa-sign-in-alt"></i> Log in</a>
+</div>
+
+<div class="content">
+  <div class="introduction-section">
+    <h2>소개</h2>
+    <p>Park's Emotion을 만든 저와 함께하는 여정에 대해 사람들에게 알릴 수 있는 좋은 기회입니다. </p>
+    
+    <!-- 자기소개 내용을 추가하세요. -->
+    <p>저는 박찬호이고, 현재 국립공주대학교 4학년 입니다. [간략한 배경 소개]</p>
+    <h4>[포기하지 않는 청년]</h4>
+    <p>전적 대학(충남도립대학) 2학년 때, 교내 대회를 하였습니다. 처음엔 안드로이드 앱을 하려고 하였으나
+    부족한 부분이 너무 많기에 CSS와 JavaScript를 이용하여 사이트를 만들기 시작하였습니다.<br>
+    많이 부족한 실력임에도 불구하고 여러 가지 방법과 코드를 적용하는 방식을 서칭하고 실험해보면서 웹 사이트를 구축하기 시작했습니다.<br>
+    그렇게 하여 여러 학과들이 참여한 곳에서 제가 처음으로 만든 웹 사이트를 이용하여 대회에 출전하였고,
+    부족한 실력임에도 불구하고 10등이라는 성적을 거두었습니다.이것을 기반으로 FrontEnd라는 꿈을 확고하게 되었습니다.</p>
+    <h4>[책임감 있는 청년]</h4>
+    <p>
+    어렸을 때 부터 아버지는 저에게 책임감을 강조하셨습니다. 대신 제가 어떠한 일을 하고 그것을 진심으로 하고싶다면 그것에 대한 책임감을 강조하셨습니다.<br>
+    이런 아버지의 말씀을 마음에 새겨넣고 저에게 주어진 일에 대해 최선을 다했고, 그 결과 여러 가지 직책을 맡았습니다.<br>
+    조별과제가 주어졌을 땐 조장을 학과에서는 부학회장을 팀 프로젝트를 할 때는 팀장을 맡았습니다.<br>
+    그 결과 홀로 가졌던 것보다 더욱 더 큰 책임감을 가져야 했으며 때론 지치고 포기하고싶었습니다.하지만 이를 통해서 더 많은 배움을
+    얻을 수 있었고, 책임감을 가지고도 부담스러워하지 않고 웃으면서 열심히 할 수 있는 청년이 되었습니다.</p>
+    <h4>[Park's Emotion은 웹 사이트에 생체 데이터를 이용하여 보안을 실시하고 사람의 
+        얼굴을 사용하여 감정 확인 및 패션 추천시스템입니다]</h4>
+    <p>Python에 CNN과 JavaScript 등을 활용하여 사람의 감정을 확인하는 성능을 더욱 향상시켰습니다.</p>
+    <p>수행 업무</p>
+    <ul>
+        <li>ResNet 2개를 이용한 안면마비 유무 판별 및 감정 확인 시스템</li>
+        <ul>
+            <li>ResNet 두 개를 이용하여 안면마비의 유무 판별</li>
+            <li>안면마비가 있으면 그 Data를 기반으로 감정 유추</li>
+            <li>마비가 없는 사람일 경우 그 자체 Data를 기반으로 감정 유추</li>
+            <li>모델 구성 및 확인</li>
+            <ol>
+                <li>안면마비 유무 판별</li>
+                <ul>
+                    <li>모델 선택 : ResNet101을 사용하였습니다.</li>
+                    <li>표준화 및 정규화 : 각 픽셀의 평균을 0,표준편차 1로 조정하고 정규화를 수행하였습니다.</li>
+                    <li>옵티마이저 : Adam이나 SGD를 사용할 예정입니다.</li>
+                    <li>정규화 방법 : Dropout이나 Batch Normalization을 사용할 예정입니다.</li>
+                </ul>
+                <li>감정 판별</li>
+                <ul>
+                    <li>안면마비 있음/없음에 따른 데이터 분리</li>
+                    <li>모델 설계</li>
+                    <li>데이터 증강</li>
+                    <li>학습 전략 : Transfer Learning을 해볼 생각입니다.</li>
+                </ul>
+                <li>평가 및 조정</li>
+                <ul>
+                    <li>평가 지표 : 정확도,F1 점수, 정밀도 등 여러가지 평가 지표를 사용할 예정입니다.</li>
+                    <li>조정 : 실험을 반복하면서 모델 구조,HyperParameter,데이터 전처리 방법 등을 조정할 예정입니다.</li>
+                </ul>
+            </ol>
+        </ul>
+        <li>CLIP을 이용한 의류 추천 시스템</li>
+        <ul>
+            <li>모델 구성 및 확인</li>
+            <ol>
+                <li>모델 구성</li>
+                <ul>
+                    <li>CLIP모델 활용 : OpenAI가 개발한 CLIP을 사용할 예정입니다.</li>
+                    <li>Text형식의 질문과 Image를 입력받아 두 입력 사이의 상호작용을 학습시킬예정입니다.</li>
+                    <li>이 과정에서 얼굴 사진은 사용자의 스타일,성별,연령 등을 반영할 수 있도록 추가 정보를 추출하는 데 사용할 예정입니다</li>
+                </ul>
+                <li>추천 시스템 구축</li>
+                <ul>
+                    <li><strong>특징 추출</strong></li>
+                    <li>CLIP모델을 사용하여 의류 이미지와 사용자 질문의 특징을 추출합니다.</li>
+                    <li>의류 데이터셋에 대해 미리 특징을 추출해놓고 사용자 질문이 들어올 때마다 해당 질문의 특징을 실시간으로 추출하여 매칭할 예정입니다.</li>
+                    <li><strong>유사도 측정</strong></li>
+                    <li>코사인 유사도, 유클리드 거리 등 사용할 예정입니다.</li>
+                    <li><strong>추천 알고리즘</strong></li>
+                    <li>계산된 유사도를 바탕으로 사용자에게 가장 적합한 의류를 추천합니다.</li>
+                    <li>여기서 유사도가 높은 상위 N개를 추천하는 방법으로 진행해볼예정입니다.</li>
+                </ul>
+                <li>평가 및 조정</li>
+                <ul>
+                    <li><strong>성능 평가</strong></li>
+                    <li>사용자로부터 피드백을 받아 추천 시스템의 성능을 평가하는 것으로 해볼 예정입니다.</li>
+                    <li><strong>모델 조정</strong></li>
+                    <li>추천 알고리즘의 파라미터 조정, 데이터 전처리 방법 개선,추가적인 데이터 수집 등</li>
+                </ul>
+            </ol>
+        </ul>
+        <li>Regist Data Processing</li>
+        <ul>
+            <li>Database와 연동하여 실행하는 것을 기반으로 수정 예정</li>
+        </ul>
+
+    </ul>
+    <h4>해경 경험을 통해 알게된 점</h4>
+    <p>. . .</p>
+    <!-- 추가 내용 추후에 넣을 예정-->
+
+  </div>
+</div>
+
+<div class="footer">
+    <a href="#about"><i class="fas fa-info-circle"></i> About Us</a> |
+    <a href="mailto:cooom0470@gmail.com"><i class="fas fa-envelope"></i> Contact</a> |
+    <a href="#terms"><i class="fas fa-file-alt"></i> Terms</a>
+  <p>&copy; 2024 Park's Emotion LAB. All rights reserved.</p>
+</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

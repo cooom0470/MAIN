@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Park's Emotion - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            
+        }
+        .bg-image {
+            background-image: url('AI_half_trans.png');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: fixed;
+            left: 0;
+            right: 0;
+            z-index: -1;
+        }
+        .header {
+            padding: 20px;
+            text-align: center;
+            background-color: #343a40;
+            color: white;
+        }
+        .nav {
+            overflow: hidden;
+            background-color: #007bff;
+            padding: 0 20px;
+        }
+        .nav a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            transition: background-color 0.3s;
+        }
+        .nav a.right {
+            float: right;
+        }
+        .nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }   
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            padding: auto;
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            background: transparent;
+        }
+        .login-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+        }
+        .login-form {
+            width: 40%;
+            padding: 30px;
+            border-radius: 8px;
+            background: #f7f7f7;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 5%;
+        }
+        .welcome-section {
+            width: 45%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+        }
+        .login-form h2, .welcome-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .login-form input[type="text"],
+        .login-form input[type="password"],
+        .login-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .login-form input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .login-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+        .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-image"></div>
+    <div class="header">
+        <h1>Park's Emotion LAB</h1>
+      </div>
+      <div class="nav">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="Introduc.html"><i class="fas fa-users"></i> Introduce</a>
+        <a href="#fashion"><i class="fas fa-tshirt"></i> Fashion</a>
+        <a href="#emotion"><i class="fas fa-smile"></i> Emotion</a>
+        <a href="Regist.html" class="right"><i class="fas fa-user-plus"></i> Regist</a>
+        <a href="Login.html" class="right"><i class="fas fa-sign-in-alt"></i> Log in</a>
+      </div>
+    <div class="content">
+    <div class="login-section">
+        <form class="login-form" onsubmit="login(event)">
+            <h2>Login to Park's Emotion</h2>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <input type="submit" value="Log In">
+        </form>
+
+        <div class="welcome-section">
+            <h2>Welcome to Park's Emotion!</h2>
+            <p>Thank you for visiting us. Park's Emotion is your go-to place for fashion that resonates with your emotions. Discover styles that reflect your mood and personality. Start your unique fashion journey with us today and make every day extraordinary.</p>
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+        <a href="#about"><i class="fas fa-info-circle"></i> About Us</a> |
+        <a href="mailto:cooom0470@gmail.com"><i class="fas fa-envelope"></i> Contact</a> |
+        <a href="#terms"><i class="fas fa-file-alt"></i> Terms</a>
+        <p>&copy; 2024 Park's Emotion LAB. All rights reserved.</p>
+      </div>
+    
+    <script>
+        function login(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+            localStorage.setItem('isLoggedIn', 'true'); // Simulate a login
+            alert('Logged in successfully! Redirecting...');
+            // Redirect to another page or update UI
+        }
+    </script>
+</body>
+</html>
