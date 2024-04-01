@@ -103,6 +103,27 @@
     .form-group button:hover {
         background-color: #0056b3;
     }
+    .form-group fieldset label {
+        display: inline-block; 
+        margin-right: 10px; 
+    }
+    .email-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .email-group input[type="text"],
+    .email-group select {
+        margin: 0 5px;
+        flex-grow: 1;
+    }
+    .email-group #emailFront {
+        flex-grow: 2;
+    }
+    .email-group select {
+        flex-grow: 0;
+        width: auto;
+    }
 </style>
 </head>
 <body>
@@ -148,8 +169,20 @@
         <input type="date" id="birthdate" name="birthdate" required>
       </div>
       <div class="form-group">
-        <label for="email">이메일</label>
-        <input type="email" placeholder="이메일 주소" id="email" name="email" required>
+        <label for="emailFront">이메일</label>
+        <div class="email-group">
+          <input type="text" placeholder="이메일 앞부분" id="emailFront" name="emailFront" required>
+          <span>@</span>
+          <input type="text" id="emailDomain" placeholder="직접 입력" name="emailDomain" required>
+          <select id="domainSelect" onchange="updateEmailDomain()">
+              <option value="" disabled selected>선택하세요</option>
+              <option value="gmail.com">gmail.com</option>
+              <option value="naver.com">naver.com</option>
+              <option value="nate.com">nate.com</option>
+              <option value="hanmail.net">hanmail.net</option>
+              <option value="custom">직접 입력</option>
+          </select>
+        </div>
       </div>
       <div class="form-group">
         <label for="phone">전화번호</label>
@@ -158,6 +191,14 @@
       <div class="form-group">
         <label for="nickname">닉네임</label>
         <input type="text" placeholder="사용 할 닉네임 입력" id="nickname" name="nickname" required>
+      </div>
+      <div class="form-group">
+        <fieldset>
+        <legend>성별</legend>
+        <p>성별을 선택해주세요</p>
+        <label><input type="radio" name="gender" value="male">남</label>
+        <label><input type="radio" name="gender" value="female">여</label>
+      </fieldset>
       </div>
       
       <div class="form-group">
@@ -176,5 +217,19 @@
 </div>
 
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script>
+  function updateEmailDomain() {
+      var select = document.getElementById('domainSelect');
+      var input = document.getElementById('emailDomain');
+      var value = select.value;
+  
+      if (value === "custom") {
+          input.value = "";
+          input.focus();
+      } else {
+          input.value = value;
+      }
+  }
+  </script>
 </body>
 </html>
