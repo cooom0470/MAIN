@@ -22,7 +22,6 @@
         z-index: -1;
     }
     .content {
-        padding: auto;
         position: relative;
         z-index: 1;
         padding: 20px;
@@ -115,18 +114,27 @@
     input[type="submit"]:hover {
         background-color: #0056b3;
     }
+    .ai-response {
+        display: none;
+        margin-top: 20px;
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 16px;
+    }
 </style>
 </head>
 <body>
 
 <div class="bg-image"></div>
 <div class="header">
-    <img src="Emotion.png">
+    <h1>Park's Emotion LAB</h1>
 </div>
 <div class="nav">
-    <a href="html.html"><i class="fas fa-home"></i> Home</a>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
     <a href="Introduc.html"><i class="fas fa-users"></i> Introduce</a>
-    <a href="#fashion"><i class="fas fa-tshirt"></i> Fashion</a>
+    <a href="fashion.html"><i class="fas fa-tshirt"></i> Fashion</a>
     <a href="#emotion"><i class="fas fa-smile"></i> Emotion</a>
     <a href="Regist.html" class="right"><i class="fas fa-user-plus"></i> Regist</a>
     <a href="Login.html" class="right"><i class="fas fa-sign-in-alt"></i> Log in</a>
@@ -139,8 +147,11 @@
     </div>
     <div class="custom-request">
         <h2>패션 요청 작성</h2>
-        <textarea placeholder="'20대 여성의 봄 캐주얼 옷 추천해줘'와 같이 작성해주세요."></textarea>
-        <input type="submit" value="요청 제출">
+        <textarea id="fashion-request" placeholder="'20대 여성의 봄 캐주얼 옷 추천해줘'와 같이 작성해주세요."></textarea>
+        <input type="submit" value="요청 제출" onclick="submitRequest()">
+    </div>
+    <div class="ai-response" id="ai-response">
+        <!-- AI 응답 내용은 여기에 동적으로 삽입할예정입니다. -->
     </div>
 </div>
 
@@ -152,5 +163,17 @@
 </div>
 
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script>
+function submitRequest() {
+    // 사용자의 요청을 받아 AI 응답 표시
+    var requestText = document.getElementById('fashion-request').value;
+    var responseText = "AI의 응답: 여기에 '" + requestText + "'에 대한 AI의 분석 결과가 표시됩니다.";
+
+    // AI 응답 섹션을 업데이트하고 보이게 설정
+    var responseElement = document.getElementById('ai-response');
+    responseElement.innerText = responseText;
+    responseElement.style.display = 'block'; // AI 응답 섹션을 보이게 설정
+}
+</script>
 </body>
 </html>
